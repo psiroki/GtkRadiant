@@ -82,7 +82,7 @@ def radiant_makeversion(append_about):
     line = f.readline()
     f.close()
   else:
-    line = "Custom build based on revision " + str(svn.getRevision(os.getcwd()))
+    line = "Custom build based on revision " + "(git)" # str(svn.getRevision(os.getcwd()))
   # optional additional message
   if ( not append_about is None ):
     line += append_about

@@ -130,6 +130,8 @@ void error_redirect (const gchar *domain, GLogLevelFlags log_level, const gchar 
       strcat (buf, "WARNING (recursed) **: ");
     else
       strcat (buf, "WARNING **: ");
+    printf("%s%s\n", buf, message);
+    return;
     break;
   case G_LOG_LEVEL_MESSAGE:
     if (in_recursion)
