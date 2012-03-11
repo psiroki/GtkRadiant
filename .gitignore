@@ -1,0 +1,10 @@
+*.pyc
+build
+include/RADIANT_*
+include/version.h
+include/version
+include/aboutmsg.h
+scons.signatures.dblite
+libstdc++.a
+site.conf
+install
