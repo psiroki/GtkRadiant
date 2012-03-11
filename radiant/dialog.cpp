@@ -96,7 +96,7 @@ GtkSpinButton* DialogSpinner_new(double value, double lower, double upper, int f
   {
     ++digits;
   }
-  GtkSpinButton* spin = GTK_SPIN_BUTTON(gtk_spin_button_new(GTK_ADJUSTMENT(gtk_adjustment_new(value, lower, upper, step, 10, 10)), step, digits)); 
+  GtkSpinButton* spin = GTK_SPIN_BUTTON(gtk_spin_button_new(GTK_ADJUSTMENT(gtk_adjustment_new(value, lower, upper, step, 10, 0)), step, digits)); 
   gtk_widget_show(GTK_WIDGET(spin));
   gtk_widget_set_size_request(GTK_WIDGET(spin), 64, -1);
   return spin;

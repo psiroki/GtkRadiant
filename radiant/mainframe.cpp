@@ -1789,11 +1789,11 @@ void ScreenUpdates_Disable(const char* message, const char* title)
     bool isActiveApp = MainFrame_isActiveApp();
 
     g_wait = create_wait_dialog(title, message);
-    gtk_grab_add(GTK_WIDGET(g_wait.m_window));
 
     if(isActiveApp)
     {
       gtk_widget_show(GTK_WIDGET(g_wait.m_window));
+      gtk_grab_add(GTK_WIDGET(g_wait.m_window));
       ScreenUpdates_process();
     }
   }

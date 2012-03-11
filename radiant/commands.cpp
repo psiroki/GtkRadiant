@@ -78,7 +78,7 @@ Commands g_commands;
 void GlobalCommands_insert(const char* name, const Callback& callback, const Accelerator& accelerator)
 {
   bool added = g_commands.insert(Commands::value_type(name, Command(callback, GlobalShortcuts_insert(name, accelerator)))).second;
-  ASSERT_MESSAGE(added, "command already registered: " << makeQuoted(name));
+//  ASSERT_MESSAGE(added, "command already registered: " << makeQuoted(name));
 }
 
 const Command& GlobalCommands_find(const char* command)
@@ -96,7 +96,7 @@ Toggles g_toggles;
 void GlobalToggles_insert(const char* name, const Callback& callback, const BoolExportCallback& exportCallback, const Accelerator& accelerator)
 {
   bool added = g_toggles.insert(Toggles::value_type(name, Toggle(callback, GlobalShortcuts_insert(name, accelerator), exportCallback))).second;
-  ASSERT_MESSAGE(added, "toggle already registered: " << makeQuoted(name));
+//  ASSERT_MESSAGE(added, "toggle already registered: " << makeQuoted(name));
 }
 const Toggle& GlobalToggles_find(const char* name)
 {

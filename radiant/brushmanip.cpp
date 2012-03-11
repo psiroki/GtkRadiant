@@ -416,7 +416,7 @@ public:
   }
   void visit(FaceInstance& face) const
   {
-    if(face.isSelected(SelectionSystem::eFace))
+    if(face.isSelected(/*SelectionSystem::eFace*/))
     {
       m_visitor.visit(face.getFace());
     }
